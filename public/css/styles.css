@@ -1,0 +1,22 @@
+body {
+    margin: 0; 
+    padding: 0; 
+    height: 100vh; 
+    background: linear-gradient(to right, #4ca1af, #c4e0e5); 
+    color: white;
+  }
+  
+  #bouton {
+    background: 	#4682B4;
+    border-radius: 5px;
+    color: white;
+  }
+
+  table, th, td {
+    width: 50%;
+    border: 1px solid;
+  }
+
+  #error {
+    color: red;
+  }

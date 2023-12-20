@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/styles.css">
+<h2>Vocabulary</h2>
+<table>
+    <tr>
+      <th>Word</th>
+      <th>Translation</th>
+      <th>Accuracy</th>
+      <th>Actions</th>
+    </tr>
+    <% for(elem of colonnes) { %>
+    <tr>
+      <td><%= elem.word %></td>
+      <td><%= elem.translation %></td>
+      <td> <%= Math.round(elem.nbaccuracy/elem.nbtest * 100)  %> % </td>
+      <td><a href="/delete/<%= elem.id %>">Delete</a></td>
+    </tr>
+    <% } %>
+  </table>
+
+<h2>Add a new word :</h2>
+<form action="/add" method="POST">
+    Word : <input name="input1" /><br>
+    Translation : <input name="input2" /><br>
+  <input type="submit" id="bouton" />
+</form>
+
+<form action="/" method="GET">
+    <input type="submit" id="bouton" value="Go to Test yourself">
+  </form>

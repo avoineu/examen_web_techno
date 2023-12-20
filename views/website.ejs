@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/styles.css">
+<h1>Test yourself :</h1>
+<h3 id="error"><%= errorMessage %></h3>
+<h3>How do you say <span style="font-weight: 200;">"<%= wordtotranslate %>"</span> in french ?</h3>
+<form action="/verify/<%= idtotranslate %>" method="POST">
+  Your answer : <input name="verify" />
+  <input type="submit"  id="bouton"/>
+</form>
+<h2>Go to vocabulary:</h2>
+<form action="/addanelementonotherpage" method="GET">
+  <input type="submit" id="bouton" value="Go to vocabulary">
+</form>
